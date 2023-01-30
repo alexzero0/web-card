@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
+
+const basePath = process.env.NODE_ENV === 'production' ? '/web-card' : '';
+
 const nextConfig = {
   reactStrictMode: true,
-  basePath: '/web-card',
-  assetPrefix: '/web-card/',
+  basePath,
+  assetPrefix: `${basePath}/`,
 }
 
 module.exports = nextConfig
