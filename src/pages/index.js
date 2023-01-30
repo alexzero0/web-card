@@ -7,7 +7,8 @@ import config from 'config'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  console.log('config.BASE_PATH', config.BASE_PATH);
+  const { BASE_PATH: basePath } = config;
+  console.log('config.BASE_PATH', basePath);
   return (
     <>
       <Head>
@@ -30,7 +31,7 @@ export default function Home() {
             >
               By{' '}
               <Image
-                src="/vercel.svg"
+                src={`${basePath}/vercel.svg`}
                 alt="Vercel Logo"
                 className={styles.vercelLogo}
                 width={100}
@@ -44,7 +45,7 @@ export default function Home() {
         <div className={styles.center}>
           <Image
             className={styles.logo}
-            src="/next.svg"
+            src={`${basePath}/next.svg`}
             alt="Next.js Logo"
             width={180}
             height={37}
@@ -52,7 +53,7 @@ export default function Home() {
           />
           <div className={styles.thirteen}>
             <Image
-              src="/thirteen.svg"
+              src={`${basePath}/thirteen.svg`}
               alt="13"
               width={40}
               height={31}
