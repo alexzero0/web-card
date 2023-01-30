@@ -2,10 +2,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
+import config from 'config'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  console.log('config.BASE_PATH', config.BASE_PATH);
   return (
     <>
       <Head>
