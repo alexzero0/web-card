@@ -4,7 +4,7 @@ const basePath = process.env.NODE_ENV === 'production' ? '/web-card' : '';
 
 const nextConfig = {
   reactStrictMode: true,
-  basePath,
+  basePath: basePath,
   assetPrefix: `${basePath}/`,
 }
 
