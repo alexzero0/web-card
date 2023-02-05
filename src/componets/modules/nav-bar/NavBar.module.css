@@ -1,0 +1,14 @@
+.container {
+    position: relative;
+    width: 40px;
+    height: 100vh;
+    background-color: var(--background-color);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.burger {
+    display: flex;
+    padding: 6px;
+    justify-content: center;
+}
