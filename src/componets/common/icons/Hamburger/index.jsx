@@ -1,7 +1,7 @@
 import { memo, useMemo } from "react";
 import styles from './hamburger.module.css';
 
-const HamburgerMenu = ({ open, handleOpen }) => {
+export const HamburgerIcon = memo(({ open, handleOpen }) => {
     const rotateBurger = useMemo(() => {
         return open ? '180deg' : '0deg';
     }, [open]);
@@ -43,6 +43,4 @@ const HamburgerMenu = ({ open, handleOpen }) => {
             }}></div>
         </div>
     )
-};
-
-export default memo(HamburgerMenu);
+});

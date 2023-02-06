@@ -1,7 +1,6 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import Head from 'next/head';
 import NavBar from '../componets/modules/nav-bar';
-import config from 'config'
+import config from 'config';
 
 export default function Home() {
   const { BASE_PATH: basePath } = config;

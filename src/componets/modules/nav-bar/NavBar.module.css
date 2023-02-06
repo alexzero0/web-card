@@ -1,14 +1,31 @@
 .container {
     position: relative;
-    width: 40px;
+    width: fit-content;
     height: 100vh;
     background-color: var(--background-color);
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+    transform: translateX(var(--translate-x));
+    transition: .2s all;
 }
 
 .burger {
     display: flex;
     padding: 6px;
-    justify-content: center;
+    justify-content: flex-end;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.item {
+    display: flex;
+    margin: 5px 0;
+}
+
+.wrapper {
+    padding-right: 36px;
 }

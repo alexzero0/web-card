@@ -1,6 +1,7 @@
 import { memo, useCallback, useState } from 'react';
 import styles from './NavBar.module.css';
-import HamburgerMenu from '../../common/icons/Hamburger';
+import { HamburgerIcon, InstagramIcon } from '../../common/icons';
+import { menu } from '../../constant';
 
 const NavBar = () => {
     const [open, setOpen] = useState(0);
@@ -8,10 +9,24 @@ const NavBar = () => {
     const handleOpen = useCallback(() => setOpen(prev => !prev), []);
 
     return (
-        <header className={styles.container}>
+        <header className={styles.container} style={{
+            '--translate-x': open ? '0px' : '-145px'
+        }}>
             <div className={styles.burger}>
-                <HamburgerMenu open={open} handleOpen={handleOpen} />
+                <HamburgerIcon open={open} handleOpen={handleOpen} />
             </div>
+            <div className={styles.wrapper}>
+                <ul className={styles.menu}>
+                    {menu.map((item, index) => {
+                        return (
+                            <li key={index} className={styles.item}>
+                                <a href={item.link}><span>{item.title}</span></a>
+                            </li>
+                        )
+                    })}
+                </ul>
+            </div>
+            <InstagramIcon width='32px' fill='white' />
         </header>
     );
 }
