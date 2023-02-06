@@ -1,2 +1,2 @@
-export * from './hamburger';
-export * from './instagram';
+export * from './hamburger/index';
+export * from './instagram/index';
