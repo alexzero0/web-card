@@ -2,7 +2,7 @@ import { memo, useMemo } from "react";
 import styles from './hamburger.module.css';
 
 export const HamburgerIcon = memo(
-    function HamburgerIcon({ open, handleOpen }) {
+    function HamburgerIconComponent({ open, handleOpen }) {
         const rotateBurger = useMemo(() => {
             return open ? '180deg' : '0deg';
         }, [open]);
