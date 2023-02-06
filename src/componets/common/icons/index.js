@@ -1,2 +1,2 @@
-export * from './hamburger/index.jsx';
-export * from './instagram/index.jsx';
+export * from './hamburger';
+export * from './instagram';
