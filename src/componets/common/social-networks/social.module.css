@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.container__list {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    justify-content: space-evenly;
+    width: 100%;
+}

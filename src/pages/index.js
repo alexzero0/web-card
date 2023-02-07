@@ -1,10 +1,17 @@
 import Head from 'next/head';
 import NavBar from '../componets/modules/nav-bar';
 import config from 'config';
+import { useCallback, useState } from 'react';
+import Brand from '../componets/common/brand';
+
 
 export default function Home() {
   const { BASE_PATH: basePath } = config;
-  console.log('config.BASE_PATH', basePath);
+  const [open, setOpen] = useState(0);
+
+  const handleOpen = useCallback(() => setOpen(prev => !prev), []);
+
+
   return (
     <>
       <Head>
@@ -13,9 +20,13 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href={`${basePath}/favicon.ico`} />
       </Head>
-      <NavBar />
-      <main>
-        
+      <main className='general' style={{
+        '--translate-x': open ? '0px' : '-180px'
+      }}>
+        <NavBar open={open} handleOpen={handleOpen} />
+        <div className='content'>
+          <Brand />
+        </div>
       </main>
     </>
   )
