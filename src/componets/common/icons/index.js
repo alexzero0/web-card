@@ -1,2 +1,2 @@
-export * from '@/componets/common/icons/hamburger';
-export * from '@/componets/common/icons/instagram';
+export { default as HamburgerIcon } from './hamburger';
+export { default as InstagramIcon } from './instagram';

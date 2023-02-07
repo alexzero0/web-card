@@ -46,4 +46,4 @@ const HamburgerIconComponent = ({ open, handleOpen }) => {
 };
 
 const HamburgerIcon = memo(HamburgerIconComponent);
-export { HamburgerIcon };
+export default HamburgerIcon;
