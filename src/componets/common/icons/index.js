@@ -1,2 +1,2 @@
-export * from '../icons/hamburger';
-export * from '../icons/instagram';
+export * from '@/componets/common/icons/hamburger';
+export * from '@/componets/common/icons/instagram';
