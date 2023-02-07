@@ -32,7 +32,7 @@
   font-style: normal;
 }
 
-:root { 
+:root {
   --background-color: #444;
   --general-background-color: #222;
   --text-color-h: #eee;
@@ -92,8 +92,17 @@ span {
   display: flex;
   transform: translateX(var(--translate-x));
   transition: .2s all;
+  width: calc(100% + 180px);
 }
 
 .content {
   display: flex;
+  width: 100%;
+}
+
+.wrapper_brand {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: flex-end;
 }

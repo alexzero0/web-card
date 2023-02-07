@@ -25,7 +25,9 @@ export default function Home() {
       }}>
         <NavBar open={open} handleOpen={handleOpen} />
         <div className='content'>
-          <Brand />
+          <div className='wrapper_brand'>
+            <Brand open={open} />
+          </div>
         </div>
       </main>
     </>
