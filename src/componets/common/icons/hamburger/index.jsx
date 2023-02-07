@@ -1,7 +1,7 @@
 import { memo, useMemo } from "react";
 import styles from './hamburger.module.css';
 
-const HamburgerIconComponent = ({ open, handleOpen }) => {
+const HamburgerIcon = ({ open, handleOpen }) => {
     const rotateBurger = useMemo(() => {
         return open ? '180deg' : '0deg';
     }, [open]);
@@ -45,5 +45,4 @@ const HamburgerIconComponent = ({ open, handleOpen }) => {
     )
 };
 
-const HamburgerIcon = memo(HamburgerIconComponent);
-export default HamburgerIcon;
+export default memo(HamburgerIcon);
