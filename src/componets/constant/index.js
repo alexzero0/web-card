@@ -1,8 +1,8 @@
 export const menu = [
     {
         id: 1,
-        title: 'Home',
-        link: '#home',
+        title: 'Welcome',
+        link: '#welcome',
     },
     {
         id: 2,

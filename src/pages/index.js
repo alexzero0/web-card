@@ -3,7 +3,7 @@ import NavBar from '../componets/modules/nav-bar';
 import config from 'config';
 import { useCallback, useState } from 'react';
 import Brand from '../componets/common/brand';
-
+import Welcome from '../componets/modules/welcome';
 
 export default function Home() {
   const { BASE_PATH: basePath } = config;
@@ -27,6 +27,9 @@ export default function Home() {
         <div className='content'>
           <div className='wrapper_brand'>
             <Brand open={open} />
+          </div>
+          <div className='module'>
+            <Welcome />
           </div>
         </div>
       </main>

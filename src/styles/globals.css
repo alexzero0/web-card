@@ -98,6 +98,7 @@ span {
 .content {
   display: flex;
   width: 100%;
+  flex-direction: column;
 }
 
 .wrapper_brand {
@@ -105,4 +106,9 @@ span {
   height: fit-content;
   display: flex;
   justify-content: flex-end;
+}
+
+.module {
+  display: flex;
+  padding: 10px;
 }
