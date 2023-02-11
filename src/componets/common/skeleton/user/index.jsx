@@ -9,9 +9,6 @@ const SkeletonUser = () => {
             <div className={styles.text}>
                 <Text />
             </div>
-            <div className={styles.text}>
-                <Text />
-            </div>
         </div>
     );
 };
