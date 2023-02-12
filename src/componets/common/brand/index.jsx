@@ -5,7 +5,7 @@ const Brand = ({ open }) => {
 
     return (
         <div className={styles.container} style={{
-            '--translate-x': open ? '-180px' : '0px'
+            '--translate-x': open ? '-165px' : '0px'
         }}>
             <div className={styles.brand}>
                 <div className={styles.brand_front}>

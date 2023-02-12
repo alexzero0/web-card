@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.wrapper_label {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.progress {
+    position: relative;
+    display: inline-block;
+    background-color: #222;
+    border: 1px solid #04b4e0;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 10px;
+    margin-bottom: 8px;
+    width: 100%;
+}
+
+.progress:before {
+    content: '';
+    position: absolute;
+    background-color: #04b4e0;
+}
+
+.scale {
+    width: var(--value);
+    background-color: #04b4e0;
+    border: 2px solid #222;
+    -moz-border-radius: 9px;
+    -webkit-border-radius: 9px;
+    border-radius: 9px;
+    height: 8px;
+    padding: 0;
+}

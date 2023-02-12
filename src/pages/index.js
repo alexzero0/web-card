@@ -4,6 +4,7 @@ import config from 'config';
 import { useCallback, useState } from 'react';
 import Brand from '../componets/common/brand';
 import Welcome from '../componets/modules/welcome';
+import Resume from '../componets/modules/resume';
 
 export default function Home() {
   const { BASE_PATH: basePath } = config;
@@ -21,7 +22,7 @@ export default function Home() {
         <link rel="icon" href={`${basePath}/favicon.ico`} />
       </Head>
       <main className='general' style={{
-        '--translate-x': open ? '0px' : '-180px'
+        '--translate-x': open ? '0px' : '-165px'
       }}>
         <NavBar open={open} handleOpen={handleOpen} />
         <div className='content'>
@@ -30,6 +31,9 @@ export default function Home() {
           </div>
           <div className='module'>
             <Welcome />
+          </div>
+          <div className='module'>
+            <Resume />
           </div>
         </div>
       </main>

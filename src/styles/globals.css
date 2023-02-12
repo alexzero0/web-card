@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Poppins';
-  src: local('Poppins'), url('../../public/statick/fonts/Poppins-Black.ttf') format('truetype');
+  src: local('Poppins'), url('../../public/static/fonts/Poppins-Black.ttf') format('truetype');
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: 'Poppins Regular';
-  src: local('Poppins Regular'), url('../../public/statick/fonts/Poppins-Regular.ttf') format('truetype');
+  src: local('Poppins Regular'), url('../../public/static/fonts/Poppins-Regular.ttf') format('truetype');
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -20,14 +20,14 @@
 
 @font-face {
   font-family: 'Poppins';
-  src: local('Poppins'), url('../../public/statick/fonts/Poppins-Bold.ttf') format('truetype');
+  src: local('Poppins'), url('../../public/static/fonts/Poppins-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Poppins';
-  src: local('Poppins'), url('../../public/statick/fonts/Poppins-Light.ttf') format('truetype');
+  src: local('Poppins'), url('../../public/static/fonts/Poppins-Light.ttf') format('truetype');
   font-weight: 100;
   font-style: normal;
 }
@@ -74,11 +74,26 @@ h2 {
   line-height: 1.2em;
 }
 
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--text-color-h);
+  line-height: 1.2em;
+}
+
 h4 {
   font-size: 17px;
   color: var(--text-color-h);
 
   font-weight: 300;
+  margin: 5px 0;
+  line-height: 1.2em;
+}
+
+h5 {
+  font-size: 16px;
+  color: var(--text-color-h);
+
   margin: 5px 0;
   line-height: 1.2em;
 }
@@ -99,11 +114,34 @@ span {
   color: var(--text-color-s);
 }
 
+label {
+  color: white;
+  font-family: "Poppins Regular", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+progress::-webkit-progress-bar {
+  background-color: yellow;
+  border-radius: 7px;
+}
+
+progress::-webkit-progress-value {
+  background-color: blue;
+  border-radius: 7px;
+  box-shadow: 1px 1px 5px 3px rgba( 255, 0, 0, 0.8 );
+}
+
+progress::-moz-progress-bar {
+  /* style rules */
+}
+
 .general {
   display: flex;
   transform: translateX(var(--translate-x));
   transition: .2s all;
-  width: calc(100% + 180px);
+  width: calc(100% + 165px);
+  overflow-x: hidden;
 }
 
 .content {
@@ -112,6 +150,8 @@ span {
   flex-direction: column;
   overflow: auto;
   height: 100vh;
+  overflow-x: hidden;
+  align-items: center;
 }
 
 .wrapper_brand {
@@ -124,4 +164,5 @@ span {
 .module {
   display: flex;
   padding: 10px;
+  max-width: 1000px;
 }

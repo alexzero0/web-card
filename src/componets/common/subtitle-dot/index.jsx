@@ -4,7 +4,7 @@ import styles from './subtitle.module.css';
 const SubtitleDot = ({ title }) => {
     return (
         <div className={styles.container}>
-            <h3>{title}</h3>
+            <h3 className={styles.text}>{title}</h3>
         </div>
     );
 }
