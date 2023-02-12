@@ -56,6 +56,17 @@ body {
   background-color: var(--general-background-color);
 }
 
+h1 {
+  font-size: 100px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
 h2 {
   font-size: 26px;
   margin-bottom: 10px;
@@ -99,6 +110,8 @@ span {
   display: flex;
   width: 100%;
   flex-direction: column;
+  overflow: auto;
+  height: 100vh;
 }
 
 .wrapper_brand {

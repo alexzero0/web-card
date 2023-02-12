@@ -1,7 +1,72 @@
 .container {
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: 70vh;
     align-items: center;
     justify-content: center;
+    min-height: 446px;
+}
+
+.wrapper_title {
+    display: flex;
+    align-items: center;
+    height: 30%;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper_avatar {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.skeleton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: fit-content;
+    opacity: var(--opacity);
+    transition: .6s all;
+}
+
+.awatar {
+    display: flex;
+    flex-direction: column;
+    opacity: var(--opacity);
+    transition: .6s all;
+}
+
+.image {
+    display: flex;
+    align-self: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.wrapper_text {
+    display: flex;
+    align-self: center;
+    padding: 2px;
+}
+
+@media (min-width: 769px) {
+    .text {
+        font-size: 20px;
+        line-height: 28px;
+    }
 }
