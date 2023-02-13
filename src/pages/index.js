@@ -1,10 +1,11 @@
 import Head from 'next/head';
 import NavBar from '../componets/modules/nav-bar';
-import config from 'config';
+import config from '../../config';
 import { useCallback, useState } from 'react';
 import Brand from '../componets/common/brand';
 import Welcome from '../componets/modules/welcome';
 import Resume from '../componets/modules/resume';
+import AboutMe from '../componets/modules/about-me';
 
 export default function Home() {
   const { BASE_PATH: basePath } = config;
@@ -34,6 +35,9 @@ export default function Home() {
           </div>
           <div className='module'>
             <Resume />
+          </div>
+          <div className='module'>
+            <AboutMe />
           </div>
         </div>
       </main>

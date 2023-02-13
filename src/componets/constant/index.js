@@ -69,4 +69,22 @@ export const experience = [
         specialization: 'Middle Developer',
         description: 'Aliquam tincidunt malesuada tortor vitae iaculis. In eu turpis iaculis, feugiat risus quis, aliquet urna. Quisque fringilla mollis risus, eu pulvinar dolor.'
     }
-]
+];
+
+export const aboutMe = {
+    description: [
+        
+    'I am a highly qualified and talented frontend developer who creates visually attractive and user-friendly web applications.',
+
+    'I try to stay up to date with the latest web development technologies and am constantly looking for new ways to improve my skills.',
+    
+    'I am a team player who is always ready to make every effort to ensure that projects are completed on time and in accordance with the highest standards.',
+    
+    'I have technical abilities and a creative mindset, so I am a valuable asset for any development team.',
+    
+    `I love learning new technologies, such as backend, I'm ready to write python code`,
+    
+    ],
+    age: 24,
+    email: 'alexmishdeveloper@gmail.com'
+};

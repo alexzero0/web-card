@@ -26,7 +26,6 @@ const Resume = () => {
                         <div className={styles.subtitle}>
                             <SubtitleDot title="Experience" />
                         </div>
-                        {/* <div className={styles.sectiondiv} /> */}
                         <div>
                             <History chainOfEvents={experience} />
                         </div>

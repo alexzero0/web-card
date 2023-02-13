@@ -6,29 +6,34 @@
     margin: 10px;
 }
 
-.subtitle {
-    margin: 10px;
-}
-
 .content {
     display: flex;
-    width: 100%;
-    flex-wrap: wrap;
+    padding: 10px 20px;
 }
 
-.education {
+.description {
     display: flex;
     flex-direction: column;
     width: 60%;
+    padding-right: 10px;
 }
 
-.skills {
+.info {
     display: flex;
     flex-direction: column;
     width: 40%;
+    padding-left: 10px;
 }
 
-@media (max-width: 768px) {
+.sblue {
+    color: var(--blue-color);
+}
+
+.text {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
     .content {
         display: flex;
         flex-direction: column;
@@ -36,14 +41,15 @@
         align-content: center;
     }
     
-    .education {
+    .description {
         display: flex;
         flex-direction: column;
         width: 100%;
         padding: 0 20px;
+        margin-bottom: 20px;
     }
     
-    .skills {
+    .info {
         display: flex;
         flex-direction: column;
         width: 100%;
