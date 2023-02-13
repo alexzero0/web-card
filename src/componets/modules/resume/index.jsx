@@ -5,7 +5,8 @@ import Card from '../../common/card';
 import SubtitleDot from "../../common/subtitle-dot";
 import History from '../../common/history';
 import Skills from '../../common/skills';
-import { educations, skills } from '../../constant';
+import Knowledges from '../../common/knowledges';
+import { educations, skills, knowledges, experience } from '../../constant';
 
 const Resume = () => {
     return (
@@ -22,6 +23,13 @@ const Resume = () => {
                         <div>
                             <History chainOfEvents={educations} />
                         </div>
+                        <div className={styles.subtitle}>
+                            <SubtitleDot title="Experience" />
+                        </div>
+                        {/* <div className={styles.sectiondiv} /> */}
+                        <div>
+                            <History chainOfEvents={experience} />
+                        </div>
                     </div>
                     <div className={styles.skills}>
                         <div className={styles.subtitle}>
@@ -29,6 +37,12 @@ const Resume = () => {
                         </div>
                         <div>
                             <Skills skills={skills} />
+                        </div>
+                        <div>
+                            <SubtitleDot title="Knowledges" />
+                        </div>
+                        <div>
+                            <Knowledges knowledges={knowledges} />
                         </div>
                     </div>
                 </div>

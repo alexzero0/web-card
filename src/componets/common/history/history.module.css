@@ -67,3 +67,22 @@
     padding-right: 15px;
     vertical-align: top;
 }
+
+@media (max-width: 500px) {
+    .timeline {
+        position: relative;
+        display: block;
+    }
+
+    .left {
+        width: 100%;
+        display: block;
+        padding-left: 25px;
+        min-height: 100%;
+        text-align: left;
+    }
+
+    .divider {
+        left: 0;
+    }
+}

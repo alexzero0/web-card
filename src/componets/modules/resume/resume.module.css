@@ -29,3 +29,39 @@
     width: 40%;
     min-width: 278px;
 }
+
+.sectiondiv {
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-content: center;
+        /* flex-wrap: wrap; */
+    }
+    
+    .education {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 20px;
+        min-width: auto;
+    }
+    
+    .skills {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 20px;
+        min-width: auto;
+    }
+}
+
+@media (max-width: 375px) {
+    .education {
+        padding: 0 5px;
+    }
+}

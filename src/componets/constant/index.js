@@ -52,4 +52,21 @@ export const skills = [
         name: 'CSS',
         value: 85,
     },
+];
+
+export const knowledges = ['DRY', 'SOLID', 'KISS', 'Singlton', 'Factory', 'Abstract factory', 'Builder'];
+
+export const experience = [
+    {
+        year: '2009-2013',
+        place: 'GOOGLE',
+        specialization: 'Junior Developer',
+        description: 'Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales.'
+    },
+    {
+        year: '2013-Current',
+        place: 'IBM',
+        specialization: 'Middle Developer',
+        description: 'Aliquam tincidunt malesuada tortor vitae iaculis. In eu turpis iaculis, feugiat risus quis, aliquet urna. Quisque fringilla mollis risus, eu pulvinar dolor.'
+    }
 ]
