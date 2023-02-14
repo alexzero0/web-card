@@ -8,52 +8,61 @@ import AboutMe from '../componets/modules/about-me';
 
 export default function Home() {
   const [open, setOpen] = useState(0);
-  const handleOpen = useCallback(() => setOpen(prev => !prev), []);
+  const handleOpen = useCallback(() => setOpen((prev) => !prev), []);
 
   const welcomeRef = useRef();
   const resumeRef = useRef();
   const aboutRef = useRef();
 
-  const handleScrollTo = useCallback((title) => {
-    switch (title) {
-      case 'welcome':
-        welcomeRef?.current?.scrollIntoView({ behavior: "smooth" });
-        break;
-      case 'resume':
-        resumeRef?.current?.scrollIntoView({ behavior: "smooth" });
-        break;
-      case 'about':
-        aboutRef?.current?.scrollIntoView({ behavior: "smooth" });
-        break;
-      default:
-        break;
-    }
-    handleOpen();
-  }, []);
-
+  const handleScrollTo = useCallback(
+    (title) => {
+      switch (title) {
+        case 'welcome':
+          welcomeRef?.current?.scrollIntoView({ behavior: 'smooth' });
+          break;
+        case 'resume':
+          resumeRef?.current?.scrollIntoView({ behavior: 'smooth' });
+          break;
+        case 'about':
+          aboutRef?.current?.scrollIntoView({ behavior: 'smooth' });
+          break;
+        default:
+          break;
+      }
+      handleOpen();
+    },
+    [handleOpen]
+  );
 
   return (
     <>
       <BrowserHead />
-      <main className='general' style={{
-        '--translate-x': open ? '0px' : '-165px'
-      }}>
-        <NavBar open={open} handleOpen={handleOpen} handleScrollTo={handleScrollTo} />
-        <div className='content'>
-          <div className='wrapper_brand'>
+      <main
+        className="general"
+        style={{
+          '--translate-x': open ? '0px' : '-165px',
+        }}
+      >
+        <NavBar
+          open={open}
+          handleOpen={handleOpen}
+          handleScrollTo={handleScrollTo}
+        />
+        <div className="content">
+          <div className="wrapper_brand">
             <Brand open={open} />
           </div>
-          <div className='module' ref={welcomeRef}>
+          <div className="module" ref={welcomeRef}>
             <Welcome />
           </div>
-          <div className='module' ref={resumeRef}>
+          <div className="module" ref={resumeRef}>
             <Resume />
           </div>
-          <div className='module' ref={aboutRef}>
+          <div className="module" ref={aboutRef}>
             <AboutMe />
           </div>
         </div>
       </main>
     </>
-  )
+  );
 }
