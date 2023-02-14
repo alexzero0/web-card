@@ -1,4 +1,4 @@
-import { cloneElement, useState, useEffect } from "react";
+import { cloneElement, useState, useEffect } from 'react';
 
 export const SVG = ({
   style = {},
@@ -7,8 +7,8 @@ export const SVG = ({
   className = '',
   height,
   viewBox = '0 0 32 32',
-  children
-}) =>
+  children,
+}) => (
   <svg
     width={width}
     style={style}
@@ -19,9 +19,10 @@ export const SVG = ({
     xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     {cloneElement(children, {
-      fill
+      fill,
     })}
-  </svg>;
+  </svg>
+);
 
 function useWindowSize() {
   const [size, setSize] = useState([0, 0]);
@@ -31,10 +32,10 @@ function useWindowSize() {
     const handleResize = () => {
       setSize([window.innerHeight, window.innerWidth]);
     };
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     // Clean up!
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
   return size;
@@ -46,7 +47,8 @@ export const useViewportWidth = () => {
 
 export const useViewportWidthSize = () => {
   const width = useViewportWidth();
-  return { // the width is greater than
-    widthIGT768: width > 768
-  }
-}
+  return {
+    // the width is greater than
+    widthIGT768: width > 768,
+  };
+};
