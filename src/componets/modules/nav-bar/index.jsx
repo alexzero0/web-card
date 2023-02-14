@@ -5,7 +5,7 @@ import { menu } from '../../constant';
 import SocialNetworks from '../../common/social-networks';
 import Copyright from '../../common/copyright';
 
-const NavBar = ({ open, handleOpen }) => {
+const NavBar = ({ open, handleOpen, handleScrollTo }) => {
 
     return (
         <header className={styles.container}>
@@ -25,7 +25,7 @@ const NavBar = ({ open, handleOpen }) => {
                         {menu.map((item, index) => {
                             return (
                                 <li key={index} className={styles.item}>
-                                    <a href={item.link}><span>{item.title}</span></a>
+                                    <a href={item.link} onClick={() => handleScrollTo(item.scrollTo)}><span>{item.title}</span></a>
                                 </li>
                             )
                         })}
