@@ -48,7 +48,7 @@ const Welcome = () => {
               />
             </div>
             <div className={styles.wrapper_text}>
-              <span className={styles.text}>I am front-end developer</span>
+              <span className={styles.text}>I am fullstack developer</span>
             </div>
           </div>
         </div>

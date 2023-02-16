@@ -21,18 +21,18 @@ export const menu = [
 
 export const educations = [
   {
-    year: 2008,
-    place: 'University of Studies',
-    specialization: 'Frontend Development',
+    year: '2016-2020',
+    place: 'Southern Federal University',
+    specialization: 'Radio engineering',
     description:
-      'Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales.',
+      'Studied the theory of wave propagation in space, physics, electrodynamics, higher mathematics. They taught programming languages such as c/c++/c#, python, VHDL (xilinx).',
   },
   {
-    year: 2007,
-    place: 'University of Studies',
-    specialization: 'Graphic Design',
+    year: '2020-2022',
+    place: 'Southern Federal University',
+    specialization: 'Software engineer',
     description:
-      'Aliquam tincidunt malesuada tortor vitae iaculis. In eu turpis iaculis, feugiat risus quis, aliquet urna. Quisque fringilla mollis risus, eu pulvinar dolor.',
+      'Studied algorithms, architectures, and data structures. Developed web and mobile applications, took courses in testing.',
   },
 ];
 
@@ -67,22 +67,43 @@ export const knowledges = [
   'Factory',
   'Abstract factory',
   'Builder',
+  'Dependency Injection',
 ];
 
 export const experience = [
   {
-    year: '2009-2013',
-    place: 'GOOGLE',
-    specialization: 'Junior Developer',
+    year: '02.2020 - 08.2020',
+    place: 'ePolitic',
+    specialization: 'Junior frontend developer',
     description:
-      'Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales.',
+      'I was on the team developing a service for organizing meetings for politicians. I developed pages with simple functionality, made adaptive layout, fixed bugs.',
   },
   {
-    year: '2013-Current',
-    place: 'IBM',
-    specialization: 'Middle Developer',
+    year: '09.2020-09.2021',
+    place: 'spridakunskap',
+    specialization: 'Junior+ fullstack developer',
     description:
-      'Aliquam tincidunt malesuada tortor vitae iaculis. In eu turpis iaculis, feugiat risus quis, aliquet urna. Quisque fringilla mollis risus, eu pulvinar dolor.',
+      'Developed an application to transfer the accumulated experience to a younger generation. An admin panel has been developed for creating/editing questions. The user (who is leaving the organization) had questions displayed and had to transfer his knowledge, after which a pdf file was generated and sent to the mail of the selected receiver',
+  },
+  {
+    year: '09.2021-02.2022',
+    place: 'throughworld',
+    specialization: 'Middle fullstack developer',
+    description:
+      'Developed an MVP application for ordering a tour around the world (analog booking.com)',
+  },
+  {
+    year: '02.2022-11.2022',
+    place: 'TimeTracker',
+    specialization: 'Middle fullstack developer',
+    description:
+      'Developed a web application for time tracking (admin panel and user part for viewing statistics), also implemented an application for Linux/Mac/Windows on electron.js',
+  },
+  {
+    year: '11.2022-Current',
+    place: 'NDA',
+    specialization: 'Middle fullstack developer',
+    description: 'Developing a medicine-related application',
   },
 ];
 
