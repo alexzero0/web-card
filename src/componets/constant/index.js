@@ -57,6 +57,78 @@ export const skills = [
     name: 'CSS',
     value: 85,
   },
+  {
+    name: 'Stylent-Component',
+    value: 91,
+  },
+  {
+    name: 'Redux',
+    value: 90,
+  },
+  {
+    name: 'Redux-Toolkit',
+    value: 95,
+  },
+  {
+    name: 'Next',
+    value: 85,
+  },
+  {
+    name: 'MaterialUI',
+    value: 80,
+  },
+  {
+    name: 'Ant Design',
+    value: 90,
+  },
+  {
+    name: 'chakra-ui',
+    value: 75,
+  },
+  {
+    name: 'Apollo Client',
+    value: 85,
+  },
+  {
+    name: 'Redux Saga',
+    value: 65,
+  },
+  {
+    name: 'Node',
+    value: 75,
+  },
+  {
+    name: 'Express',
+    value: 80,
+  },
+  {
+    name: 'GraphQL',
+    value: 70,
+  },
+  {
+    name: 'Nest',
+    value: 80,
+  },
+  {
+    name: 'Sequelize',
+    value: 80,
+  },
+  {
+    name: 'Prisma',
+    value: 73,
+  },
+  {
+    name: 'RabbitMQ',
+    value: 60,
+  },
+  {
+    name: 'Docker',
+    value: 70,
+  },
+  {
+    name: 'Docker-compose',
+    value: 60,
+  },
 ];
 
 export const knowledges = [
@@ -68,6 +140,8 @@ export const knowledges = [
   'Abstract factory',
   'Builder',
   'Dependency Injection',
+  'Atomic design',
+  'Feature-Sliced Design',
 ];
 
 export const experience = [
@@ -116,8 +190,6 @@ export const aboutMe = {
     'I am a team player who is always ready to make every effort to ensure that projects are completed on time and in accordance with the highest standards.',
 
     'I have technical abilities and a creative mindset, so I am a valuable asset for any development team.',
-
-    `I love learning new technologies, such as backend, I'm ready to write python code`,
   ],
   age: 24,
   email: 'alexmishdeveloper@gmail.com',
