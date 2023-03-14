@@ -1,5 +1,5 @@
 import NavBar from '../componets/modules/nav-bar';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import BrowserHead from '../componets/modules/Head';
 import Brand from '../componets/common/brand';
 import Welcome from '../componets/modules/welcome';
