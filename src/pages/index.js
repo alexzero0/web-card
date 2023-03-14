@@ -27,6 +27,7 @@ export default function Home() {
 
   const handleScrollTo = useCallback(
     (title) => {
+      handleOpen();
       // console.log(e);
       // console.log('---------');
       // console.log(e.preventDefault);
@@ -44,7 +45,6 @@ export default function Home() {
         default:
           break;
       }
-      handleOpen();
     },
     [handleOpen]
   );
