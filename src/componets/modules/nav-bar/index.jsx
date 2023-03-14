@@ -32,11 +32,7 @@ const NavBar = ({ open, handleOpen, handleScrollTo }) => {
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
-                      // console.log('nav-bar');
-                      // console.log(e);
-                      // console.log(e.preventDefault);
-                      // console.log('nav-bar');
-                      handleScrollTo(e, item.scrollTo);
+                      handleScrollTo(item.scrollTo);
                     }}
                   >
                     <span>{item.title}</span>
