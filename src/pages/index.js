@@ -34,18 +34,28 @@ export default function Home() {
       handleOpen();
       console.log(e);
       console.log('---------');
-      console.log(e.pageY);
+      console.log(e.scrollTop);
+      console.log('scrollTop', aboutRef?.current?.scrollTop);
       console.log('---------');
       // console.log(e.preventDefault);
       // e.preventDefault();
       switch (title) {
         case 'about':
           console.log('start about');
-          aboutRef?.current?.scrollIntoView({ behavior: 'smooth' });
+          // const finalOffset =
+          //   aboutRef?.current?.getBoundingClientRect().top +
+          //   aboutRef?.current?.scrollTop;
+          // console.log('finalOffset', finalOffset);
+          // console.log(window.scrollTo);
+          // document.body.scrollTo;
+          setTimeout(() => {
+            aboutRef?.current?.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+          // aboutRef?.current?.scrollIntoView({ behavior: 'smooth' });
           // window.scrollTo(-99999, -99999);
           // window.scrollTo({
-          //   left: -99999,
-          //   top: -99999,
+          //   left: finalOffset,
+          //   top: finalOffset,
           //   behavior: 'smooth',
           // });
           break;
