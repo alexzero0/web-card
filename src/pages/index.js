@@ -1,5 +1,5 @@
 import NavBar from '../componets/modules/nav-bar';
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import BrowserHead from '../componets/modules/Head';
 import Brand from '../componets/common/brand';
 import Welcome from '../componets/modules/welcome';
@@ -13,6 +13,17 @@ export default function Home() {
   const welcomeRef = useRef();
   const resumeRef = useRef();
   const aboutRef = useRef();
+
+  useEffect(() => {
+    function wheelListener(e) {
+      e.preventDefault();
+    }
+    // document.addEventListener('wheel', wheelListener, {passive: false});
+    window.addEventListener('wheel', wheelListener, { passive: false });
+    return () => {
+      window.removeEventListener('wheel', wheelListener);
+    };
+  }, []);
 
   const handleScrollTo = useCallback(
     (title) => {
