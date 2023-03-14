@@ -21,12 +21,16 @@ export default function Home() {
   //   // document.addEventListener('wheel', wheelListener, {passive: false});
   //   window.addEventListener('wheel', wheelListener, { passive: false });
   //   return () => {
-  //     window.removeEventListener('wheel', wheelListener);
+  //     window.removeEventListener('wheel', wheelListener, { passive: true });
   //   };
   // }, []);
 
   const handleScrollTo = useCallback(
     (title) => {
+      function wheelListener(e) {
+        e.preventDefault();
+      }
+      window.addEventListener('wheel', wheelListener, { passive: false });
       handleOpen();
       // console.log(e);
       // console.log('---------');
@@ -45,6 +49,7 @@ export default function Home() {
         default:
           break;
       }
+      window.removeEventListener('wheel', wheelListener, { passive: true });
     },
     [handleOpen]
   );
