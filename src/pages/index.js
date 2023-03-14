@@ -10,6 +10,7 @@ export default function Home() {
   const [open, setOpen] = useState(0);
   const handleOpen = useCallback(() => setOpen((prev) => !prev), []);
 
+  const contentRef = useRef();
   const welcomeRef = useRef();
   const resumeRef = useRef();
   const aboutRef = useRef();
@@ -40,30 +41,56 @@ export default function Home() {
       // console.log(e.preventDefault);
       // e.preventDefault();
       switch (title) {
-        case 'about':
-          console.log('start about');
-          // const finalOffset =
-          //   aboutRef?.current?.getBoundingClientRect().top +
-          //   aboutRef?.current?.scrollTop;
-          // console.log('finalOffset', finalOffset);
-          // console.log(window.scrollTo);
-          // document.body.scrollTo;
-          setTimeout(() => {
-            aboutRef?.current?.scrollIntoView({ behavior: 'smooth' });
-          }, 100);
-          // aboutRef?.current?.scrollIntoView({ behavior: 'smooth' });
-          // window.scrollTo(-99999, -99999);
-          // window.scrollTo({
-          //   left: finalOffset,
-          //   top: finalOffset,
-          //   behavior: 'smooth',
-          // });
-          break;
+        // case 'about':
+        //   console.log('start about');
+        //   const finalOffset =
+        //     aboutRef?.current?.getBoundingClientRect().top +
+        //     aboutRef?.current?.scrollTop;
+        //   console.log('finalOffset', finalOffset);
+        //   console.log('windows offset', window);
+        //   // console.log(window.scrollTo);
+        //   // document.body.scrollTo;
+        //   // setTimeout(() => {
+        //   //   aboutRef?.current?.scrollIntoView({ behavior: 'smooth' });
+        //   // }, 100);
+        //   console.log('------------------');
+        //   aboutRef?.current?.scrollIntoView({ behavior: 'smooth' });
+        //   console.log(
+        //     'contentRef',
+        //     contentRef?.current?.getBoundingClientRect()
+        //   );
+        //   console.log('contentRef scrollTop', contentRef?.current?.scrollTop);
+        //   console.log(
+        //     'finalOffset',
+        //     aboutRef?.current?.getBoundingClientRect().top +
+        //       aboutRef?.current?.scrollTop
+        //   );
+        //   // window.scroll(30, 500);
+        //   // window.scrollTo({
+        //   //   left: finalOffset,
+        //   //   top: finalOffset,
+        //   //   behavior: 'smooth',
+        //   // });
+        //   break;
         case 'welcome':
           welcomeRef?.current?.scrollIntoView({ behavior: 'smooth' });
           break;
         case 'resume':
           resumeRef?.current?.scrollIntoView({ behavior: 'smooth' });
+          break;
+        case 'about':
+          console.log('start about');
+          aboutRef?.current?.scrollIntoView({ behavior: 'smooth' });
+          setTimeout(() => {
+            const finalOffset =
+              aboutRef?.current?.getBoundingClientRect().top +
+              aboutRef?.current?.scrollTop;
+            console.log('finalOffset', finalOffset);
+            if (finalOffset > 300) {
+              console.log('start fix');
+              aboutRef?.current?.scrollIntoView({ behavior: 'smooth' });
+            }
+          }, 300);
           break;
         default:
           break;
@@ -87,7 +114,7 @@ export default function Home() {
           handleOpen={handleOpen}
           handleScrollTo={handleScrollTo}
         />
-        <div className="content">
+        <div className="content" ref={contentRef}>
           <div className="wrapper_brand">
             <Brand open={open} />
           </div>
