@@ -39,19 +39,21 @@ export default function Home() {
       // console.log(e.preventDefault);
       // e.preventDefault();
       switch (title) {
+        case 'about':
+          console.log('start about');
+          aboutRef?.current?.scrollIntoView({ behavior: 'smooth' });
+          // window.scrollTo(-99999, -99999);
+          // window.scrollTo({
+          //   left: -99999,
+          //   top: -99999,
+          //   behavior: 'smooth',
+          // });
+          break;
         case 'welcome':
           welcomeRef?.current?.scrollIntoView({ behavior: 'smooth' });
           break;
         case 'resume':
           resumeRef?.current?.scrollIntoView({ behavior: 'smooth' });
-          break;
-        case 'about':
-          aboutRef?.current?.scrollIntoView({ behavior: 'smooth' });
-          // window.scrollTo({
-          //   left: e.screenX,
-          //   top: e.screenY,
-          //   behavior: 'smooth',
-          // });
           break;
         default:
           break;
