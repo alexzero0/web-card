@@ -26,14 +26,16 @@ export default function Home() {
   // }, []);
 
   const handleScrollTo = useCallback(
-    (title) => {
-      function wheelListener(e) {
-        e.preventDefault();
-      }
-      window.addEventListener('wheel', wheelListener, { passive: false });
+    (e, title) => {
+      // function wheelListener(e) {
+      //   e.preventDefault();
+      // }
+      // window.addEventListener('wheel', wheelListener, { passive: false });
       handleOpen();
-      // console.log(e);
-      // console.log('---------');
+      console.log(e);
+      console.log('---------');
+      console.log(e.pageY);
+      console.log('---------');
       // console.log(e.preventDefault);
       // e.preventDefault();
       switch (title) {
@@ -45,11 +47,16 @@ export default function Home() {
           break;
         case 'about':
           aboutRef?.current?.scrollIntoView({ behavior: 'smooth' });
+          // window.scrollTo({
+          //   left: e.screenX,
+          //   top: e.screenY,
+          //   behavior: 'smooth',
+          // });
           break;
         default:
           break;
       }
-      window.removeEventListener('wheel', wheelListener, { passive: true });
+      // window.removeEventListener('wheel', wheelListener, { passive: true });
     },
     [handleOpen]
   );

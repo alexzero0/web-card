@@ -27,15 +27,16 @@ const NavBar = ({ open, handleOpen, handleScrollTo }) => {
               return (
                 <li key={index} className={styles.item}>
                   <a
+                    key={index}
                     href={item.link}
                     onClick={(e) => {
                       e.preventDefault();
                       e.stopPropagation();
-                      console.log('nav-bar');
-                      console.log(e);
-                      console.log(e.preventDefault);
-                      console.log('nav-bar');
-                      handleScrollTo(item.scrollTo);
+                      // console.log('nav-bar');
+                      // console.log(e);
+                      // console.log(e.preventDefault);
+                      // console.log('nav-bar');
+                      handleScrollTo(e, item.scrollTo);
                     }}
                   >
                     <span>{item.title}</span>
