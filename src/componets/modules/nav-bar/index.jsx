@@ -28,7 +28,7 @@ const NavBar = ({ open, handleOpen, handleScrollTo }) => {
                 <li key={index} className={styles.item}>
                   <a
                     href={item.link}
-                    onClick={() => handleScrollTo(item.scrollTo)}
+                    onClick={(e) => handleScrollTo(e, item.scrollTo)}
                   >
                     <span>{item.title}</span>
                   </a>

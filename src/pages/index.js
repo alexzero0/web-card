@@ -15,7 +15,8 @@ export default function Home() {
   const aboutRef = useRef();
 
   const handleScrollTo = useCallback(
-    (title) => {
+    (e, title) => {
+      e.preventDefault();
       switch (title) {
         case 'welcome':
           welcomeRef?.current?.scrollIntoView({ behavior: 'smooth' });
