@@ -30,6 +30,7 @@ const NavBar = ({ open, handleOpen, handleScrollTo }) => {
                     href={item.link}
                     onClick={(e) => {
                       e.preventDefault();
+                      e.stopPropagation();
                       console.log('nav-bar');
                       console.log(e);
                       console.log(e.preventDefault);

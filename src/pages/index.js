@@ -14,16 +14,16 @@ export default function Home() {
   const resumeRef = useRef();
   const aboutRef = useRef();
 
-  useEffect(() => {
-    function wheelListener(e) {
-      e.preventDefault();
-    }
-    // document.addEventListener('wheel', wheelListener, {passive: false});
-    window.addEventListener('wheel', wheelListener, { passive: false });
-    return () => {
-      window.removeEventListener('wheel', wheelListener);
-    };
-  }, []);
+  // useEffect(() => {
+  //   function wheelListener(e) {
+  //     e.preventDefault();
+  //   }
+  //   // document.addEventListener('wheel', wheelListener, {passive: false});
+  //   window.addEventListener('wheel', wheelListener, { passive: false });
+  //   return () => {
+  //     window.removeEventListener('wheel', wheelListener);
+  //   };
+  // }, []);
 
   const handleScrollTo = useCallback(
     (title) => {
