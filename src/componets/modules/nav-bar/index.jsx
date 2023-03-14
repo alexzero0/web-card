@@ -28,7 +28,14 @@ const NavBar = ({ open, handleOpen, handleScrollTo }) => {
                 <li key={index} className={styles.item}>
                   <a
                     href={item.link}
-                    onClick={(e) => handleScrollTo(e, item.scrollTo)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      console.log('nav-bar');
+                      console.log(e);
+                      console.log(e.preventDefault);
+                      console.log('nav-bar');
+                      handleScrollTo(item.scrollTo);
+                    }}
                   >
                     <span>{item.title}</span>
                   </a>
