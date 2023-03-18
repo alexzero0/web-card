@@ -147,28 +147,28 @@ export const knowledges = [
 export const experience = [
   {
     year: '02.2020 - 08.2020',
-    place: 'ePolitic',
+    place: 'sw politic',
     specialization: 'Junior frontend developer',
     description:
       'I was on the team developing a service for organizing meetings for politicians. I developed pages with simple functionality, made adaptive layout, fixed bugs.',
   },
   {
     year: '09.2020-09.2021',
-    place: 'spridakunskap',
+    place: 'sw youth political organization',
     specialization: 'Junior+ fullstack developer',
     description:
       'Developed an application to transfer the accumulated experience to a younger generation. An admin panel has been developed for creating/editing questions. The user (who is leaving the organization) had questions displayed and had to transfer his knowledge, after which a pdf file was generated and sent to the mail of the selected receiver',
   },
   {
     year: '09.2021-02.2022',
-    place: 'throughworld',
+    place: 'through world',
     specialization: 'Middle fullstack developer',
     description:
       'Developed an MVP application for ordering a tour around the world (analog booking.com)',
   },
   {
     year: '02.2022-11.2022',
-    place: 'TimeTracker',
+    place: 'Tracker',
     specialization: 'Middle fullstack developer',
     description:
       'Developed a web application for time tracking (admin panel and user part for viewing statistics), also implemented an application for Linux/Mac/Windows on electron.js',
